@@ -412,6 +412,7 @@ public:
 	static Item *lead;
 	static Item *nameTag;
 
+	static Item *shit;
 
 	static const int shovel_iron_Id			= 256;
 	static const int pickAxe_iron_Id		= 257;
@@ -617,6 +618,7 @@ public:
 	static const int horseArmorDiamond_Id = 419;
 	static const int lead_Id = 420;
 	static const int nameTag_Id = 421;
+	static const int shit_Id = 422;
 
 public:
 	const int id;
