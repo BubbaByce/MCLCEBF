@@ -172,6 +172,7 @@ Item *Item::record_09 = NULL;
 Item *Item::record_10 = NULL;
 Item *Item::record_11 = NULL;
 Item *Item::record_12 = NULL;
+Item *Item::record_least_busy_street = NULL;
 
 ShearsItem *Item::shears = NULL;
 
@@ -452,7 +453,7 @@ void Item::staticCtor()
 	Item::record_11 =			( new RecordingItem(2009, L"ward") )								->setIconName(L"record")->setDescriptionId(IDS_ITEM_RECORD_10)->setUseDescriptionId(IDS_DESC_RECORD);
 	Item::record_12 =			( new RecordingItem(2010, L"11") )									->setIconName(L"record")->setDescriptionId(IDS_ITEM_RECORD_11)->setUseDescriptionId(IDS_DESC_RECORD);
 	Item::record_08 =			( new RecordingItem(2011, L"where are we now") )					->setIconName(L"record")->setDescriptionId(IDS_ITEM_RECORD_12)->setUseDescriptionId(IDS_DESC_RECORD);
-
+	Item::record_least_busy_street = (new RecordingItem(2012, L"least_busy_street") )				->setIconName(L"record")->setDescriptionId(IDS_ITEM_RECORD_12)->setUseDescriptionId(IDS_DESC_RECORD);
 	// TU9
 	// putting the fire charge in as a torch, so that it stacks without being near the middle of the selection boxes
 	Item::fireball =			(new FireChargeItem(129))											->setBaseItemTypeAndMaterial(eBaseItemType_torch,	eMaterial_setfire)->setIconName(L"fireball")->setDescriptionId(IDS_ITEM_FIREBALL)->setUseDescriptionId(IDS_DESC_FIREBALL);
@@ -496,7 +497,9 @@ void Item::staticCtor()
 	Item::horseArmorDiamond = (new Item(163))														->setIconName(L"diamond_horse_armor")->setMaxStackSize(1)->setDescriptionId(IDS_ITEM_DIAMOND_HORSE_ARMOR)->setUseDescriptionId(IDS_DESC_DIAMOND_HORSE_ARMOR);
 	Item::lead = (new LeashItem(164))																->setBaseItemTypeAndMaterial(eBaseItemType_pockettool,	eMaterial_undefined)->setIconName(L"lead")->setDescriptionId(IDS_ITEM_LEAD)->setUseDescriptionId(IDS_DESC_LEAD);
 	Item::nameTag = (new NameTagItem(165))															->setIconName(L"name_tag")->setDescriptionId(IDS_ITEM_NAME_TAG)->setUseDescriptionId(IDS_DESC_NAME_TAG);
-	Item::shit = (new Item(166))																	->setIconName(L"shit")->setMaxStackSize(128)->setDescriptionId(IDS_ITEM_SHIT)->setUseDescriptionId(IDS_DESC_SHIT);
+	Item::shit = (new Item(166))																	->setIconName(L"feather")->setMaxStackSize(64)->setDescriptionId(IDS_ITEM_STICK)->setUseDescriptionId(IDS_DESC_STICK);
+
+
 }
 
 
@@ -776,7 +779,7 @@ bool Item::isMirroredArt()
 Item *Item::setDescriptionId(unsigned int id)
 {
 	this->descriptionId = id;
-	return this;
+	return this; 
 }
 
 LPCWSTR Item::getDescription()
@@ -1149,4 +1152,5 @@ const int Item::carrotOnAStick_Id	;
 const int Item::pumpkinPie_Id		;
 const int Item::enchantedBook_Id		;
 const int Item::netherQuartz_Id		;
+const int Item::shit_Id				;
 #endif

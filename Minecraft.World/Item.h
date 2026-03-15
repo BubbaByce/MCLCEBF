@@ -370,6 +370,7 @@ public:
 	static Item *record_10;
 	static Item *record_11;
 	static Item *record_12;
+	static Item *record_least_busy_street;
 
 	// TU9
 	static Item *fireball;
@@ -576,6 +577,7 @@ public:
 
 	// 4J-PB - this one isn't playable in the PC game, but is fine in ours
 	static const int record_08_Id			= 2267;
+	static const int record_least_bust_street_Id = 2268;
 
 	// TU9
 	static const int fireball_Id			 = 385;

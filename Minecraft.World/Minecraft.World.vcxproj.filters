@@ -3197,9 +3197,6 @@
     <ClInclude Include="FireworksMenu.h">
       <Filter>net\minecraft\world\inventory</Filter>
     </ClInclude>
-    <ClInclude Include="ShitItem.h">
-      <Filter>net\minecraft\world\item</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -5627,9 +5624,6 @@
       <Filter>net\minecraft\world\inventory</Filter>
     </ClCompile>
     <ClCompile Include="EmptyMapItem.cpp">
-      <Filter>net\minecraft\world\item</Filter>
-    </ClCompile>
-    <ClCompile Include="ShitItem.cpp">
       <Filter>net\minecraft\world\item</Filter>
     </ClCompile>
   </ItemGroup>
